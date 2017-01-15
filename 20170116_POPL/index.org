@@ -607,6 +607,20 @@ p 3 ∧ (∀x, ¬p x ∨ q (x+1)) ∧ ¬q 4
 
 * Superposition prover
 
+- Gadgets
+  - Term ordering
+  - Subsumption
+  - Demodulation
+  - Splitting
+
+- "Best-effort" intuitionist proofs
+
+- To be done:
+  - Term indexing
+  - AC redundancy elimination
+
+* Superposition prover
+
 - State transformer of tactic monad
 
 #+BEGIN_SRC lean
@@ -637,9 +651,11 @@ meta def prover := state_t prover_state tactic
 
 - Future work
   - Performance
-  - Integration with simplification rules
-  - Integration with standard library
+  - Application of simplification rules
+  - Use of standard library
+  - Integration with SMT tactics
   - Better clause representation
+  - Heterogeneous equality
   - Configurability
   - "Leanhammer"
 
